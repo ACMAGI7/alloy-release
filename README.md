@@ -1,9 +1,7 @@
 # alloy-release
 
 Public distribution channel for **Alloy** — the Claude-powered native macOS browser. This repo holds
-**release artifacts only** (signed DMGs + the Sparkle **appcast** feed). There is **no source here**;
-the application source lives in the private repo
-[`ACMAGI7/Alloy-native-private`](https://github.com/ACMAGI7/Alloy-native-private).
+**release artifacts only** (signed DMGs + the Sparkle **appcast** feed).
 
 ---
 
