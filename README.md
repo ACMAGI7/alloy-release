@@ -14,17 +14,14 @@ Public distribution channel for **Alloy** — the Claude-powered native macOS br
 
 ## Download & install
 
-1. Grab the latest **`Alloy-<version>.dmg`** from the [Releases](../../releases) page.
+1. Download **[`Alloy.dmg`](../../releases/latest/download/Alloy.dmg)** — a stable link that always
+   serves the newest release. (Each release also ships the versioned `Alloy-<version>.dmg`.)
 2. Open the DMG and drag **Alloy** onto **Applications**.
-3. **First launch (until the build is notarized):** macOS Gatekeeper may block an unsigned build.
-   Either right-click `Alloy.app` → **Open**, or run:
-   ```
-   xattr -dr com.apple.quarantine /Applications/Alloy.app
-   ```
-   Full steps are in the app's `INSTALL.md`.
+3. Launch it — that's it. No Gatekeeper steps.
 
-> A signed + notarized build (no Gatekeeper steps) and live Sparkle auto-update ship once the Apple
-> Developer ID is in place.
+> Every published build since **0.2.3** is **Developer-ID signed + notarized by Apple + stapled**, so
+> macOS opens it normally (verified `spctl -a -t exec` → "Notarized Developer ID"). Sparkle
+> auto-update is live via `appcast.xml`.
 
 ## Auto-update (Sparkle)
 

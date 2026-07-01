@@ -17,11 +17,17 @@ Configuration-management work product **WP-CL-ALLOY-REL-001** (ISO/IEC 29110 Bas
   channel — project plan (`WP-PM-ALLOY-REL-001`), distribution requirements (`WP-SI-REQ-ALLOY-REL-001`),
   verification & validation / release checklist (`WP-VV-ALLOY-REL-001`), and configuration-management
   + appcast plan (`WP-CM-ALLOY-REL-001`).
+- **Stable-named `Alloy.dmg` download asset** (IR-5, `Alloy-native-private`#67 / PR #68): each release now
+  also publishes a constant `Alloy.dmg` (identical bytes to the versioned DMG, download-only — **not** in
+  the appcast, so Sparkle keeps using the versioned enclosure) so `refinery-agi.com/alloy` can link to
+  `releases/latest/download/Alloy.dmg` (always the newest release). v0.2.10 backfilled.
 
-### Pending (first release)
-- Publish the first signed `Alloy-<version>.dmg` to GitHub Releases.
-- Add the initial `appcast.xml` Sparkle feed (first `<item>`).
-- Apple Developer ID signing + notarization so the build launches with no Gatekeeper steps.
+### Shipped (supersedes the earlier "Pending — first release" list)
+- Signed `Alloy-<version>.dmg` builds published to GitHub Releases + the Sparkle `appcast.xml` feed
+  (EdDSA-signed enclosures) are live.
+- **Apple Developer ID signing + notarization + stapling has been live since 0.2.3** — builds launch with
+  no Gatekeeper steps (verified `spctl -a -t exec` → "Notarized Developer ID"). This corrects the earlier
+  note that listed these as pending.
 
 ---
 
